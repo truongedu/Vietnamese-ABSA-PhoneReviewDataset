@@ -1,0 +1,16 @@
+{
+    "split": "test",
+    "datetime": "2025-11-11 16:24:20",
+    "model": "xlm-roberta-large",
+    "max_len": 141,
+    "batch_size": 12,
+    "aspect_microP": 0.8951992469406965,
+    "aspect_microR": 0.9147162552100032,
+    "aspect_microF1": 0.9048525214081826,
+    "aspect_macroF1": 0.8668030961402561,
+    "polarity_macroF1": 0.7984275240103206,
+    "joint_microP": 0.8305616567304676,
+    "joint_microR": 0.9086852042567799,
+    "joint_microF1": 0.8678688524590165,
+    "joint_macroF1": 0.8298761230608249
+}
