@@ -1,0 +1,2 @@
+split,datetime,model,max_len,batch_size,aspect_microP,aspect_microR,aspect_microF1,aspect_macroF1,polarity_macroF1,joint_microP,joint_microR,joint_microF1,joint_macroF1
+test,2025-11-11 12:34:56,xlm-roberta-large,141,12,0.9029356060606061,0.9171208720743829,0.9099729600763481,0.8033680883000844,0.7552406378925279,0.8434343434343434,0.9117897969629756,0.8762810527178814,0.7704607009888493
