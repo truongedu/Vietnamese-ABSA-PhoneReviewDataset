@@ -1,4 +1,4 @@
-# Vietnamese-ABSA-PhoneReview-Dataset
+# Vietnamese-ABSA-PhoneReview
 ## 📦 Dataset
 
 This project uses the **UIT-ViSD4SA** dataset, a Vietnamese benchmark dataset for
