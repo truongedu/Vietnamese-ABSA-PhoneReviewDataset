@@ -18,10 +18,11 @@ The dataset contains:
 
 > **Note:** To train the models, you must manually create a `data/` folder in the root directory and place the dataset files (`train.jsonl`, `dev.jsonl`, `test.jsonl`) there.
 
+## 📂 Project Structure & Data Setup
 
-📂 Project Structure & Data Setup
 To run the training notebooks, please ensure your directory is structured as follows:
 
+```text
 .
 ├── data/                        # Directory for dataset files (Create manually)
 │   ├── train.jsonl
@@ -62,8 +63,8 @@ The proposed method (AGA + Weighted Loss) demonstrated superior performance, par
 | **STORAGE Class F1** | **0.00%** | **65.75%** | 🚀 **Detected** |
 
 > **Key Insight:** While the overall metrics improved, the most critical success was in the **`STORAGE`** aspect. The Baseline model had 0 recall for this class, whereas the Improved model achieved a usable F1-score of **65.75%**, proving the effectiveness of the Weighted Loss and AGA mechanism in handling imbalanced data.
----
 
+---
 ## 🛠️ How to Run
 
 The training codes are provided as Jupyter Notebooks, optimized for **Kaggle** or **Google Colab** environments (GPU P100/T4 recommended).
@@ -77,13 +78,16 @@ The training codes are provided as Jupyter Notebooks, optimized for **Kaggle** o
 4.  **Output:**
     * The script will generate detailed logs describing precision/recall per class.
     * The best model weights will be saved as a `.pt` file (e.g., `best_sentence_AGA.pt`).
+    * You can download the trained checkpoints for both models here: [Google Drive: Model Checkpoints](https://drive.google.com/drive/folders/1Q7nS6rm3VveIv6Po7H9PXOwrc7oguftU?usp=sharing)
+
 
 ## 🚀 Deployment
 We provide an interactive web app to demonstrate the model.
-
 
 
 ## 🔗 References
 
 * **Dataset:** [UIT-ViSD4SA](https://github.com/kimkim00/UIT-ViSD4SA) - Released by the University of Information Technology, Vietnam National University, Ho Chi Minh City.
 * **Base Model:** [XLM-RoBERTa](https://huggingface.co/xlm-roberta-large) - Pre-trained Multilingual Language Model by Facebook AI.
+
+
