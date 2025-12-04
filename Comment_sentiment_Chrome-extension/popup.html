@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FB Comments</title>
+    <style>
+      body { font-family: sans-serif; padding: 10px; width: 300px; }
+      pre { background: #f5f5f5; padding: 5px; max-height: 200px; overflow-y: auto; }
+    </style>
+  </head>
+  <body>
+    <h3>Bình luận thu thập được:</h3>
+    <pre id="comments">Chưa có dữ liệu</pre>
+
+    <script>
+      chrome.runtime.onMessage.addListener((msg) => {
+        if (msg.type === "COMMENTS_COLLECTED") {
+          document.getElementById("comments").innerText = msg.data.join("\n");
+        }
+      });
+    </script>
+  </body>
+</html>

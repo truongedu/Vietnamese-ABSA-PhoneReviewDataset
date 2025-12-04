@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Trình phân tích Comment (ABSA)",
+  "version": "1.0.0",
+  "description": "Phân tích khía cạnh (aspect) của comment trên các trang TMĐT",
+  "permissions": [],
+  "host_permissions": [
+    "https://localhost:9753/*",
+    "file://*/*",
+    "*://*.thegioididong.com/*",
+    "*://*.dienmayxanh.com/*",
+    "*://*.fptshop.com.vn/*"
+  ],
+  "action": {
+    "default_title": "Trình phân tích Comment (Đang chạy)"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "file://*/*",
+        "*://*.thegioididong.com/*",
+        "*://*.dienmayxanh.com/*",
+        "*://*.fptshop.com.vn/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "icons": {
+    "16": "Images/icon-16.png",
+    "48": "Images/icon-48.png",
+    "128": "Images/icon-128.png"
+  }
+}
