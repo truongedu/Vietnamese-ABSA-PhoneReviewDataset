@@ -131,7 +131,7 @@ The Comment_sentiment_Chrome-extension directory contains all files needed to ru
 │   └── readme.md           # Detailed instructions for the end-user
 ```
 
-###💡 How to Install and Use
+### 💡 How to Install and Use
 Installation:
 
 - Open the Chrome browser.
