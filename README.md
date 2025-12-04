@@ -155,4 +155,8 @@ Installation:
 * **Dataset:** [UIT-ViSD4SA](https://github.com/kimkim00/UIT-ViSD4SA) - Released by the University of Information Technology, Vietnam National University, Ho Chi Minh City.
 * **Base Model:** [XLM-RoBERTa](https://huggingface.co/xlm-roberta-large) - Pre-trained Multilingual Language Model by Facebook AI.
 
+## 👥 CONTRIBUTORS
+- **Duong Thien Truong**
+- **Nguyen Thanh Cong**
+- **Nguyen Le Minh**
 
