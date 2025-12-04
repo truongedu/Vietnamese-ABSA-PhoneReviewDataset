@@ -24,14 +24,36 @@ To run the training notebooks, please ensure your directory is structured as fol
 
 ```text
 .
-├── data/                        # Directory for dataset files (Create manually)
+├── data/                       # Directory for dataset files (Create manually)
 │   ├── train.jsonl
 │   ├── dev.jsonl
 │   └── test.jsonl
-├── deployment/                  # Interactive Web App
-│   ├── app.py                   # Streamlit application code
-│   └── requirements.txt         # Dependencies for deployment
-├── train_roberta_large.ipynb    # Baseline Model (Jupyter Notebook for Kaggle)
+├── deployment/                 # Interactive Web App
+│   ├── app.py                  # Streamlit application code
+│   └── requirements.txt        # Dependencies for deployment
+├── Comment_sentiment_Chrome-extension # Chrome Extension Integration
+│   ├── background.js
+│   ├── content.js
+│   ├── Images
+│   │   ├── icon-128.png
+│   │   ├── icon-16.png
+│   │   └── icon-48.png
+│   ├── manifest.json
+│   ├── popup.html
+│   └── readme.md
+├── metrics_sentence
+│   ├── test_aspect_per_class.csv
+│   ├── test_joint_per_aspect.csv
+│   ├── test_polarity_on_gold_per_aspect.csv
+│   ├── test_summary.csv
+│   └── test_summary.json
+├── metrics_sentenceABSA_AGA
+│   ├── test_aspect_per_class.csv
+│   ├── test_joint_per_aspect.csv
+│   ├── test_polarity_on_gold_per_aspect.csv
+│   ├── test_summary.csv
+│   └── test_summary.json
+├── train_roberta_large.ipynb   # Baseline Model (Jupyter Notebook for Kaggle)
 ├── train_roberta_ABSA_AGA.ipynb # Improved Model (AGA + Weighted Loss)
 └── README.md
 ```
@@ -83,8 +105,50 @@ The training codes are provided as Jupyter Notebooks, optimized for **Kaggle** o
 
 
 ## 🚀 Deployment
-We provide an interactive web app to demonstrate the model.
+We provide an interactive web application to demonstrate the model, and most importantly, a Chrome Browser Extension to integrate the sentiment analysis feature directly into the user experience when browsing product review pages.  
+#### 1. Interactive Web Application (Streamlit)
+- Description: The deployment/ directory contains the source code for a simple web application, allowing users to input any review sentence and receive instant results for Aspect Detection and Polarity Classification.  
+- How to Run:  
+   * Install the necessary dependencies: pip install -r deployment/requirements.txt.  
+   * Run the application: streamlit run deployment/app.py.
+ 
+#### 2. Chrome Browser Integration (Chrome Extension)
+We have developed a Chrome extension to bring the power of the trained ABSA model into a real-world browsing environment, specifically on pages containing user comments.
 
+📂 Extension Structure
+The Comment_sentiment_Chrome-extension directory contains all files needed to run the Extension:
+
+```text
+├── Comment_sentiment_Chrome-extension
+│   ├── background.js       # Handles events and background logic
+│   ├── content.js          # Injects code into active web pages (DOM) to collect/display data
+│   ├── Images              # Extension icons
+│   │   ├── icon-128.png
+│   │   ├── icon-16.png
+│   │   └── icon-48.png
+│   ├── manifest.json       # The core configuration file for the Extension
+│   ├── popup.html          # User interface (UI) displayed when clicking the Extension icon
+│   └── readme.md           # Detailed instructions for the end-user
+```
+
+###💡 How to Install and Use
+Installation:
+
+- Open the Chrome browser.
+
+- Navigate to chrome://extensions/.
+
+- Toggle Developer mode on (top right corner).
+
+- Click Load unpacked.
+
+- Select the Comment_sentiment_Chrome-extension/ folder.
+
+### Usage:
+
+- Visit a webpage containing comments (e.g., a phone product page on an e-commerce platform).
+
+- Activate the Extension and see the sentiment analysis results displayed in real-time.
 
 ## 🔗 References
 
